@@ -1,6 +1,17 @@
 # дано двузначное число.Найдите сумму и произвидение его цифр
-k = int(input("ввидите двузначное число:"))
-summa = (k//10)+(k%10)
-proizvedenie = (k//10)*(k%10)
-print("Сумма цифр",summa )
-print("Произвидение цифр",proizvedenie )
+while True:
+    try:
+        num = int(input("Введите двузначное число: "))
+        # Проверяем диапазон
+        if 10 <= num <= 99:
+            break
+        else:
+            print("Ошибка: число должно быть двузначным.")
+    except ValueError:
+        print("Ошибка: введите целое число!")
+
+# Вычисления
+summa = (num // 10) + (num % 10)
+proizvedenie = (num // 10) * (num % 10)
+print("Сумма цифр:", summa)
+print("Произведение:", proizvedenie)
